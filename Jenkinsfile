@@ -14,7 +14,7 @@ pipeline{
     stage('compile'){
         steps{
           echo 'this is compile stage'
-          eco "build version ${NEW_VERSION}"
+          echo "build version ${NEW_VERSION}"
       }
      }
     
