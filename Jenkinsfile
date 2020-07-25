@@ -2,6 +2,7 @@ pipeline{
   agent any
   environment{
   NEW_VERSION="1.2.0"
+    git_credentails=credentials('	githud_cred')
   }
    stages{
   
@@ -38,6 +39,7 @@ pipeline{
      stage('deploy'){
       steps{
        echo 'this is deploy stage'
+        echo " need credentials ${git_credentails}"
       }
      }
    }
