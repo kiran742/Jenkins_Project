@@ -1,7 +1,7 @@
 Pipeline{
   stages{
   
-  stage('inti'){
+  stage('init'){
   steps{
     echo 'this is init stage' 
     }
