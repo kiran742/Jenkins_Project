@@ -22,6 +22,11 @@ pipeline{
      }
     
    stage('test'){
+     when{
+       expression{
+       BRANCH_NAME='development'
+       }
+     }
       steps{
         echo 'this is test stage'
       }
