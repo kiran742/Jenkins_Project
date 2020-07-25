@@ -32,6 +32,13 @@ pipeline{
        echo 'this is deploy stage'
       }
      }
-   
-}
+   }
+  post{
+    always{
+    echo "post build always condition"
+    }
+    success{
+    echo" all build s are success"
+    }
+  }
 }
