@@ -1,7 +1,9 @@
 pipeline{
   agent any
-  
-  stages{
+  environment{
+  NEW_VERSION="1.2.0"
+  }
+   stages{
   
     stage('init'){
       steps{
@@ -12,6 +14,7 @@ pipeline{
     stage('compile'){
         steps{
           echo 'this is compile stage'
+          eco "build version ${NEW_VERSION}"
       }
      }
     
